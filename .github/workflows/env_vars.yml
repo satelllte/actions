@@ -1,0 +1,22 @@
+name: Environment variables
+
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+
+env:
+  GLOBAL_ENV_VAR_1: "GLOBAL_ENV_VAR_1 value"
+  GLOBAL_ENV_VAR_2: "GLOBAL_ENV_VAR_2 value"
+
+jobs:
+  env_vars:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show all env vars (with step vars)
+        run: env
+        env:
+          STEP_ENV_VAR_1: "STEP_ENV_VAR_1 value"
+          STEP_ENV_VAR_2: "STEP_ENV_VAR_2 value"
+      - name: Show all env vars
+        run: env
