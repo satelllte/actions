@@ -1,2 +1,2 @@
 # actions
-Learning GitHub Actions
+GitHub Actions playground
