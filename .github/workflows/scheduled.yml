@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '*/2 * * * *' # Every 2 minutes
+    - cron: '0 0 1 1 *' # At 00:00 on day-of-month 1 in January
 
 jobs:
   scheduled:
