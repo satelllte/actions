@@ -12,14 +12,10 @@ on:
         - info
         - warning
         - debug
-      tags:
-        description: 'Test scenario tags'
+      bool:
+        description: 'Bool'
         required: false
         type: boolean
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true
 
 jobs:
   manual:
@@ -27,10 +23,8 @@ jobs:
     steps:
       - name: Log
         env:
-          LEVEL: ${{ inputs.logLevel }}
-          TAGS: ${{ inputs.tags }}
-          ENVIRONMENT: ${{ inputs.environment }}
+          LOG_LEVEL: ${{ inputs.logLevel }}
+          BOOL: ${{ inputs.bool }}
         run: |
-          echo "Log level: $LEVEL"
-          echo "Tags: $TAGS"
-          echo "Environment: $ENVIRONMENT"
+          echo "Log level: $LOG_LEVEL"
+          echo "Bool: $BOOL"
