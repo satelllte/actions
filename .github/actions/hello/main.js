@@ -1,5 +1,5 @@
 const main = () => {
-  console.info('Hello!');
+  console.log('Hello!');
 };
 
 module.exports = main;
