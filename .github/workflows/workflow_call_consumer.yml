@@ -12,3 +12,5 @@ on:
 jobs:
   workflow_call_consumer:
     uses: ./.github/workflows/workflow_call_provider.yml
+    with:
+      x: "consumer_value_x"
