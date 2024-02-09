@@ -12,7 +12,7 @@ on:
 jobs:
   self_hosted:
     runs-on: self-hosted
-    shell: powershell
     steps:
       - name: Test log
+        shell: powershell
         run: Write-Output "Hi from self-hosted runner!"
