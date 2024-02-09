@@ -1,0 +1,17 @@
+name: Workflow commands
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  workflow_commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Error annotation
+        run: echo "::error file:sample.txt,line=2::Something is wrong with this line"
