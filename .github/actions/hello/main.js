@@ -1,5 +1,7 @@
+const core = require('@actions/core');
+
 const main = () => {
-  console.log('Hello!');
+  core.info('Hello!');
 };
 
 module.exports = main;
