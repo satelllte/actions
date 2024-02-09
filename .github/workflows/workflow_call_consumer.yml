@@ -1,0 +1,23 @@
+name: Workflow call consumer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  workflow_call_consumer:
+    uses: ./.github/workflows/workflow_call_provider.yml
+    with:
+      x: "consumer_value_x"
+  consume_hello_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run actions/hello
+        uses: ./.github/actions/hello

@@ -1,0 +1,5 @@
+name: "Hello action"
+description: "A reusable GitHub Action that says Hello"
+runs:
+  using: 'node20'
+  main: 'main.js'
