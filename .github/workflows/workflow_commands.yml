@@ -18,7 +18,7 @@ jobs:
       - name: Warning annotation
         run: echo "::warning file:sample.txt,line=2::Something is wrong with this line"
       - name: Notice annotation
-        run: echo "::notice file:sample.txt,line=2,endLine=3::Something is wrong with thes lines"
+        run: echo "::notice file:sample.txt,line=2,endLine=3::Something is wrong with these lines"
       - name: Debug message
         run: echo "::debug::This is a debug message"
       - name: Mask
