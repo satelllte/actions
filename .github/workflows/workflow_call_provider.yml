@@ -2,10 +2,14 @@ name: Workflow call provider
 
 on:
   workflow_call:
+    inputs:
+      x:
+        required: true
+        type: string
 
 jobs:
   workflow_call_provider:
     runs-on: ubuntu-latest
     steps:
       - name: Run
-        run: echo "Hi from provider!"
+        run: echo "Hi from provider! Input X - ${{ inputs.x }}"
