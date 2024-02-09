@@ -1,0 +1,11 @@
+name: Workflow call provider
+
+on:
+  workflow_call:
+
+jobs:
+  workflow_call_provider:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run
+        run: echo "Hi from provider!"

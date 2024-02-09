@@ -1,0 +1,17 @@
+name: Workflow call consumer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  workflow_call_consumer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run provider
+        uses: ./github/actions/workflow_call_provider
