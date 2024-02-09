@@ -13,5 +13,5 @@ jobs:
   self_hosted:
     runs-on: self-hosted
     steps:
-      - name: Echo
-        run: echo "Hi from self-hosted runner!"
+      - name: Test log
+        run: Write-Output "Hi from self-hosted runner!"
