@@ -1,0 +1,17 @@
+name: Self-hosted
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  self_hosted:
+    runs-on: self-hosted
+    steps:
+      - name: Echo
+        run: echo "Hi from self-hosted runner!"
