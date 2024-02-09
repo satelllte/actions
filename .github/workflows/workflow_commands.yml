@@ -24,4 +24,6 @@ jobs:
       - name: Mask
         run: echo "::add-mask::Top secret"
       - name: Summary
-        run: echo "# Summary \n Hi :wave" >> $GITHUB_STEP_SUMMARY
+        run: |
+          echo "# Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Hi :wave" >> $GITHUB_STEP_SUMMARY
