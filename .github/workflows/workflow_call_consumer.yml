@@ -11,9 +11,4 @@ on:
 
 jobs:
   workflow_call_consumer:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Run provider
-        uses: ./.github/workflows/workflow_call_provider.yml
+    uses: ./.github/workflows/workflow_call_provider.yml
