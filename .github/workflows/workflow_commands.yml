@@ -15,3 +15,13 @@ jobs:
     steps:
       - name: Error annotation
         run: echo "::error file:sample.txt,line=2::Something is wrong with this line"
+      - name: Warning annotation
+        run: echo "::warning file:sample.txt,line=2::Something is wrong with this line"
+      - name: Notice annotation
+        run: echo "::notice file:sample.txt,line=2,endLine=3::Something is wrong with thes lines"
+      - name: Debug message
+        run: echo "::debug::This is a debug message"
+      - name: Mask
+        run: echo "::add-mask::Top secret"
+      - name: Summary
+        run: echo "# Summary \n Hi :wave" >> $GITHUB_STEP_SUMMARY
