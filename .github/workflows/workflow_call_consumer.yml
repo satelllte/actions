@@ -16,4 +16,4 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Run provider
-        uses: ./.github/actions/workflow_call_provider.yml
+        uses: ./.github/workflows/workflow_call_provider.yml
